@@ -3,7 +3,7 @@
     <img src="./assets/icon300X300.png">
     <ul>
       <li>
-        1
+        
       </li>
     </ul>
     <router-view/>
