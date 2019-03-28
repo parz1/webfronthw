@@ -1,7 +1,5 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>周磊 17181308</h2>
     <Card class="mainbody">
       <Timeline>
         <router-link :to="item.router" v-for="(item,index) in timeLine" :key="index">
@@ -51,15 +49,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  font-weight: 800;
-  font-size: 2rem;
-}
-h2 {
-  font-weight: normal;
-  font-size: 1rem;
-  margin-top: 0px;
-}
 ul {
   list-style-type: none;
   padding: 0;
