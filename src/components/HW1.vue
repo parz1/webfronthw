@@ -39,6 +39,11 @@ export default {
           url: "https://movie.douban.com/subject/1291546/",
           rate: 9.5
         }
+      ],
+      musicList: [
+        {
+          
+        }
       ]
     };
   }
@@ -55,7 +60,7 @@ export default {
 }
 .card {
   margin-top: 20px;
-  width: 40%;
+  width: 35%;
   min-width: 400px;
   text-align: left;
 

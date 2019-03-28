@@ -1,9 +1,12 @@
 <template>
   <div id="app">
     <img src="./assets/icon300X300.png">
-    <ul>
+    <ul id="iconul">
       <li>
-        
+        <Icon class="icon" type="ios-home"/>首页
+      </li>
+      <li>
+        <Icon class="icon" type="logo-github"/>Github
       </li>
     </ul>
     <h1>{{ msg }}</h1>
@@ -14,21 +17,37 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   icons: {
     home: {
-      url: '/'
+      url: "/"
     }
   },
-  data () {
+  data() {
     return {
       msg: "WEB前端设计作业"
-    }
+    };
   }
-}
+};
 </script>
 
 <style>
+#iconul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#iconul li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+.icon {
+  font-size: 40px;
+}
 h1 {
   font-weight: 800;
   font-size: 2rem;
@@ -38,11 +57,12 @@ h2 {
   font-size: 1rem;
   margin-top: 0px;
 }
-ul, li {
+ul,
+li {
   list-style: none;
 }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
