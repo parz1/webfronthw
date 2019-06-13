@@ -9,7 +9,7 @@
       :music="{
     title: '敬具',
     artist: '花と水飴、最終電車',
-    src: './static/music.mp3',
+    src: 'https://raw.githubusercontent.com/parz1/webfronthw/build/src/assets/music.mp3',
     pic: 'http://p2.music.126.net/MLoChdXEUHXrpZSwsFPqYw==/7814229139683634.jpg?param=130y130'
   }"
     />
