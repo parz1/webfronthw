@@ -16,11 +16,22 @@
         </li>
       </ul>
     </Card>
+    <Card class="card">
+      <p slot="title">
+        <Icon type="ios-book-outline"></Icon>喜欢的书
+      </p>
+      <img style="width:100%" src="../assets/timg.jpg">
+    </Card>
+    <back-btn id="backbtn"></back-btn>
   </div>
 </template>
 
 <script>
+import BackBtn from "./BackBtn";
 export default {
+  components: {
+    BackBtn
+  },
   data() {
     return {
       movieList: [
@@ -39,11 +50,6 @@ export default {
           url: "https://movie.douban.com/subject/1291546/",
           rate: 9.5
         }
-      ],
-      musicList: [
-        {
-          
-        }
       ]
     };
   }
@@ -51,7 +57,6 @@ export default {
 </script>
 
 <style scoped>
-
 #hello {
   display: flex;
   flex-direction: column;
@@ -60,9 +65,8 @@ export default {
 }
 .card {
   margin-top: 20px;
-  width: 35%;
-  min-width: 400px;
+  width: 40%;
+  min-width: 320px;
   text-align: left;
-
 }
 </style>

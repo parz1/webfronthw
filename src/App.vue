@@ -1,62 +1,36 @@
 <template>
   <div id="app">
-    <img src="./assets/icon300X300.png">
-    <ul id="iconul">
-      <li>
-        <Icon class="icon" type="ios-home"/>首页
-      </li>
-      <li>
-        <Icon class="icon" type="logo-github"/>Github
-      </li>
-    </ul>
-    <h1>{{ msg }}</h1>
-    <h2>周磊 17181308</h2>
+    <div id="nav"></div>
+    <background id="canvasbg"></background>
+    <aplayer
+    id="aplayer"
+    mini="true"
+      autoplay="true"
+      :music="{
+    title: '敬具',
+    artist: '花と水飴、最終電車',
+    src: './static/music.mp3',
+    pic: 'http://p2.music.126.net/MLoChdXEUHXrpZSwsFPqYw==/7814229139683634.jpg?param=130y130'
+  }"
+    />
     <router-view/>
   </div>
 </template>
 
 <script>
+import Background from "./components/Background";
+import Aplayer from "vue-aplayer";
 export default {
   name: "App",
-  icons: {
-    home: {
-      url: "/"
-    }
+  components: {
+    Background,
+    Aplayer
   },
-  data() {
-    return {
-      msg: "WEB前端设计作业"
-    };
-  }
+  data() {}
 };
 </script>
 
 <style>
-#iconul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-#iconul li {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
-}
-.icon {
-  font-size: 40px;
-}
-h1 {
-  font-weight: 800;
-  font-size: 2rem;
-}
-h2 {
-  font-weight: normal;
-  font-size: 1rem;
-  margin-top: 0px;
-}
 ul,
 li {
   list-style: none;
@@ -67,6 +41,21 @@ li {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 100px;
+}
+#nav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  margin-top: -100px;
+  background-color: #fff;
+  box-shadow: #bbb 0px 0px 3px;
+  opacity: 0.8;
+  z-index: 9;
+}
+#aplayer {
+  position: fixed;
+  right: 3px;
+  top: 63px;
 }
 </style>
